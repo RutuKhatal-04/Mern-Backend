@@ -1,0 +1,88 @@
+Microsoft Windows [Version 10.0.22631.3593]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\khata>node -v
+v20.11.1
+
+C:\Users\khata>node
+Welcome to Node.js v20.11.1.
+Type ".help" for more information.
+> console.log("like")
+like
+undefined
+> var x=10    --->this statement is not returning anything thats why undefined
+undefined    
+> console.log(x)
+10
+undefined
+
+
+here undefined come after every output it also comes in browser if we run code in console so reason is that the give code doesnt return any thing thats why it is showing undefined it only prints output not returning anything.
+
+
+node js is not a language it is run time environment which runs the js code uding v8 engine
+
+
+
+Basic Server Creation 
+const http = require("http");
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { "content-Type": "text/html" });
+    res.write("<h2>Hello there</h2>");
+    res.write("<h1>Hello there</h1>");
+    res.end();
+  })
+  .listen(4500);
+
+  run the code for every updation and on localhost:4500 see the out put
+
+
+Arrow function
+function test(a){
+    return a*10;
+}
+
+const test=(a)=>a*10   -->using arrow function
+
+
+http module of node handles req and res data
+
+what is package.json
+
+how to create package.json
+in terminal write -> npm init 
+explore package.json fle.
+
+nodemon package -> now use nodemon to run the file (nodemon filename)
+
+Node is a async language
+node js is single threaded and async 
+async means
+(
+    (1)Run first script
+    (2)Run second script (complex data)
+    it will not wait to finish 2nd script
+    (3)Run third script
+)
+
+
+Making of simple API 
+here we write api data in other file using 
+const data ={
+        name: "Rutu Khatal",
+        email: "abc@gmail.com",
+        mob: "111",
+      }
+    and command module. exports=data;
+and import the file containing data in index.js using 
+const data=require('./data);
+
+
+Read 404 error , 200 error 
+
+//Getting input from command line
+process is object in node js 
+
+
+//CRUD with file System 
